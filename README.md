@@ -23,6 +23,31 @@ student_client: 123
 2. lms_sch2
 3. lms_sch3
 
+## Run the JAVA
+
+1. compile the maven file [$mvn compile]
+2. execute the maven file [$mvn exec:java]
+
+## Run psql
+
+### lmsceo
+
+1. $psql -h localhost -p 5435 -U lmsceo
+2. Enter the User password
+3. SET SEARCH_PATH TO <schema_name>, public;
+
+### instructor_client
+
+1. $psql -h localhost -p 5435 -U instructor_client lmsceo
+2. Enter the User password
+3. SET SEARCH_PATH TO lms_sch1, public;
+
+### student_client
+
+1. $psql -h localhost -p 5435 -U student_client lmsceo
+2. Enter the User password
+3. SET SEARCH_PATH TO lms_sch1, public;
+
 ## Reset the system
 
 1. docker-compose down
