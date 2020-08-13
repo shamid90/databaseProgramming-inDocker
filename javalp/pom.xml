@@ -3,4 +3,40 @@
   <groupId>com.SH</groupId>
   <artifactId>javaolp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+     <build>
+    <plugins>
+    	
+   	  <plugin>
+   		<groupId>org.apache.maven.plugins</groupId>
+   		<artifactId>maven-compiler-plugin</artifactId>
+   		<version>3.6.1</version>
+   		<configuration>
+     		<source>1.7</source>
+     		<target>1.7</target>
+   		</configuration>
+ 	  </plugin>
+      
+      
+	  <plugin>
+	   <groupId>org.codehaus.mojo</groupId>
+	    <artifactId>exec-maven-plugin</artifactId>
+	    <version>3.0.0</version>
+	    <configuration>
+	     <mainClass>javaolp.Main</mainClass>
+	    </configuration>
+	  </plugin>
+     
+     </plugins>
+   </build>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>org.postgresql</groupId>
+  		<artifactId>postgresql</artifactId>
+  		<version>42.2.14</version>
+  	</dependency>
+  </dependencies>
+  
+  
 </project>
